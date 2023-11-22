@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations">
+  <meta name="keywords" content="Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations</title>
+
+  
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+  
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/before_after.css">
+    <link rel="icon" href="./static/images/cameraicon.svg">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./static/css/magnify.css">
+    <link rel="stylesheet" href="twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
+
+    <!-- jQuery Script (choose one version) -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- jQuery-dependent Plugin Scripts -->
+    <script src="./static/js/jquery.magnify.js"></script>
+    <script src="twentytwenty/js/jquery.event.move.js"></script>
+    <script src="twentytwenty/js/jquery.twentytwenty.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="./static/js/custom.js"></script>
+  </head>
+  
+  <body>
+  
+  
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><b>Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations</h1>
+            <div class="is-size-5 publication-authors">
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+  
+              <h2 class="title is-3">CVPR 2024</h2>
+              <!-- <span class="author-block"><sup></span> -->
+            </div>
+            <script>
+              $(document).ready(function() {
+                // var $zoom = $('.zoom').magnify(
+                // //   {
+                // //   magnifiedWidth: 1000,
+                // //   magnifiedHeight: 753
+                // // }
+                // );
+                // $zoom.destroy();
+              });
+            </script>
+  <style>
+  .magnify > .magnify-lens {
+    width: 130px;
+    height: 130px;
+  }
+  </style>
+  
+  <style>
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 10px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    
+    /* Style the active class, and buttons on mouse-over */
+    .active, .btn:hover {
+      background-color: #666;
+      color: white;
+    }
+  
+    /* .twentytwenty-container {
+      min-height: 200px;
+  } */
+  
+    </style>
+  
+            <!-- <a href="./images/teaser.png">
+              <img id="sample-teaser" src="./images/teaser.png" alt="Sample image" class="zoom">
+            </a> -->
+  
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- arxiv Link add TODO. -->
+                <span class="link-block">
+                  <a href="./static/dc2_paper.pdf"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <!-- arxiv Link add TODO. -->
+                  <a href="https://t.co/bJnAWGcT8b"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/q9_tM6_5Nq8"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link TODO. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <!-- # make newline  in title-->
+          <h2 class="title is-3">Tokyo 16k Image Reconstruction <br> Compression Ratio: 200X</h2>
+        </div>
+      </div>
+    <div class="image-grid">
+      <div class="image-container">
+          <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
+            <h3 class="title is-5">PuTT </h3>
+          </label>
+          <img src="./static/images/tokyo_compression_colors_small_4k//TT_up.png" alt="TT up tokyo16k" onclick="openFullscreen(this);">
+        </div>
+        <div class="image-container">
+          <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
+            <h3 class="title is-5">TT No Upsampling </h3>
+          </label>
+          
+          <img src="./static/images/tokyo_compression_colors_small_4k//TT_noup.png" alt="TT noup tokyo16k" onclick="openFullscreen(this);">
+        </div>
+        <div class="image-container">
+        <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
+          <h3 class="title is-5">Tucker</h3>
+        </label>
+        <img src="./static/images/tokyo_compression_colors_small_4k//Tucker.png" alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
+      </div>
+      <div class="image-container">
+        <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
+          <h3 class="title is-5">CP</h3>
+        </label>
+          <img src="./static/images/tokyo_compression_colors_small_4k/CP.png" alt="CP up tokyo16k" onclick="openFullscreen(this);">
+      </div>
+      </div>
+  </div>
+  
+
+  </section>
+
+  
+  
+  
+  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            The ability to learn compact, high-quality, and easy-to-optimize representations for visual data is paramount to many applications such as novel view synthesis and 3D reconstruction. Recent work has shown substantial success in using tensor networks to design such compact and high-quality representations.
+            However, the ability to optimize tensor-based representations, and in particular, the highly compact tensor train representation, is still lacking. This has prevented practitioners from deploying the full potential of tensor networks for visual data. 
+            To this end, we propose `Prolongation Upsampling Tensor Train (PuTT)', a novel method for learning tensor train representations in a coarse-to-fine manner. Our method involves the prolonging or `upsampling' of a learned tensor train representation, creating a sequence of `coarse-to-fine' tensor trains that are incrementally refined. 
+            We evaluate our representation along three axes: (1). compression, (2). robustness to noisy data, and (3). learning from incomplete or missing data. To assess these axes, we consider the tasks of image fitting, 3D fitting, and novel view synthesis, where our method shows an improved performance compared to state-of-the-art tensor-based methods.
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+  
+  
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            We want to train TTs
+            <br> <br>
+            <center>
+            <img src="./static/images/main_figures/Train.png"  width="500">
+          </center>
+          <br> 
+          We use a prolongation operator to upsample the learned representation
+          <br> <br>
+          <center>
+            <img src="./static/images/main_figures/prolongation.png"  width="500">
+          </center>
+  
+          <br> 
+
+          We train In a Coarse-To-Fine manner 
+          
+          <br> <br>
+
+          <center>
+            <img src="./static/images/main_figures/Coarse-to-fine.png"  width="500">
+          </center>
+            
+          </div>
+        </div>
+      </div>
+  
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Comparison with Baselines</h2>
+          <div class="content has-text-justified">
+  
+            <h3 class="title is-4">Compression - 16K Images</h3>
+  
+            <button class="btn active" id="example1_btn" onclick="changedata(0)">Tokyo</button>
+            <button class="btn" id="example2_btn" onclick="changedata(1)">Girl With Pearl Earrings</button>
+            <label class="label"><br/></label>
+  
+            <div id="Tokyo_16k">
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <!--  select first button -->
+              <label class="label" id="example1_CP" style="width: 49%; vertical-jpg: middle;margin: 0; padding: 0;">
+                <img src="./static/images/tokyo_compression_colors_small_4k/CP.png" border="1" class="zoom">
+              </label>
+              <label class="label" id="example1_Tucker" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+                <img src="./static/images/tokyo_compression_colors_small_4k/Tucker.png" border="1" class="zoom">
+              </label>
+  
+              <label class="label" id="example1_TT_noup" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+                <img src="./static/images/tokyo_compression_colors_small_4k/TT_noup.png" border="1" class="zoom">
+              </label>
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+                <img src="./static/images/tokyo_compression_colors_small_4k/TT_up.png" border="1" class="zoom">
+              </label>
+            </div>
+            <!-- <img src=" border="1" class="zoom"> -->
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <button class="btn" id="example1_CP_btn"
+                onclick="toggleimage3('example1_CP', 'example1_Tucker', 'example1_TT_noup', 'example1_CP_btn', 'example1_Tucker_btn', 'example1_TT_noup_btn', './static/images/tokyo_compression_colors_small_4k/CP.png','./static/images/tokyo_compression_colors_small_4k/TT_up.png')"
+              >CP</button>
+              <button class="btn" id="example1_Tucker_btn"
+                onclick="toggleimage3('example1_Tucker', 'example1_CP', 'example1_TT_noup', 'example1_Tucker_btn', 'example1_CP_btn', 'example1_TT_noup_btn', './static/images/tokyo_compression_colors_small_4k/Tucker.png','./static/images/tokyo_compression_colors_small_4k/TT_up.png')"
+              >Tucker</button>
+              <button class="btn" id="example1_TT_noup_btn"
+                onclick="toggleimage3('example1_TT_noup', 'example1_CP', 'example1_Tucker', 'example1_TT_noup_btn', 'example1_CP_btn', 'example1_Tucker_btn', './static/images/tokyo_compression_colors_small_4k/TT_noup.png','./static/images/tokyo_compression_colors_small_4k/TT_up.png')"
+              >TT No Upsampling</button>
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;"><h3 class="title is-5">PuTT</h3></label>
+            </div>
+
+            <label class="label"><br/></label>
+  
+            <div class="compare">
+              <!-- The before image is first -->
+              <img class="slider-image" src="./static/images/tokyo_compression_colors_small_4k/CP.png" />
+              <!-- The after image is last -->
+              <img class="slider-image" src="./static/images/tokyo_compression_colors_small_4k/TT_up.png" />
+             </div>
+             </div>
+
+  
+             <div id="girl_16k" style="display: none;">
+             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <label class="label" id="example2_CP" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+                <img src="./static/images/girl_compression16k/CP_girl.png" border="1" class="zoom">
+              </label>
+              <label class="label" id="example2_Tucker" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+                <img src="./static/images/girl_compression16k/Tucker.png" border="1" class="zoom">
+              </label>
+              <label class="label" id="example2_TT_noup" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+                <img src="./static/images/girl_compression16k/TT_up.png" border="1" class="zoom">
+              </label>
+                <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+                  <img src="./static/images/girl_compression16k/TT_up.png" border="1" class="zoom"></label>
+            </div>
+
+
+            <!-- <img src=" border="1" class="zoom"> -->
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <button class="btn" id="example2_CP_btn"
+                  onclick="toggleimage3('example2_CP', 'example2_Tucker', 'example2_TT_noup', 'example2_CP_btn', 'example2_Tucker_btn', 'example2_TT_noup_btn', './static/images/girl_compression16k/CP_girl.png','./static/images/girl_compression16k/TT_up.png')"
+              >CP</button>
+              <button class="btn" id="example2_Tucker_btn"
+                  onclick="toggleimage3('example2_Tucker', 'example2_CP', 'example2_TT_noup', 'example2_Tucker_btn', 'example2_CP_btn', 'example2_TT_noup_btn', './static/images/girl_compression16k/Tucker.png','./static/images/girl_compression16k/TT_up.png')"
+              >Tucker</button>
+              <button class="btn" id="example2_TT_noup_btn"
+                  onclick="toggleimage3('example2_TT_noup', 'example2_CP', 'example2_Tucker', 'example2_TT_noup_btn', 'example2_CP_btn', 'example2_Tucker_btn', './static/images/girl_compression16k/TT_noup.png', './static/images/girl_compression16k/TT_up.png')"
+              >TT No Upsampling</button>
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;"><h3 class="title is-5">PuTT</h3></label>
+            </div>
+            <label class="label"><br/></label>
+      
+            <div class="compare">
+              <!-- The before image is first -->
+              <img class="slider-image" src="./static/images/girl_compression16k/CP_girl.png" />
+              <!-- The after image is last -->
+              <img class="slider-image" src="./static/images/girl_compression16k/TT_up.png" />
+             </div>
+             </div>
+
+             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+             <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5"><a id="baseline-model-name">Selected Baseline</a></h3></label>
+             <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">PuTT</h3></label>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Creative Applications</h2>
+          <div class="content has-text-justified">
+          <body>Our method allows for arbitrary defocus control by simply providing the desired defocus map to the model. The defocus control does not have to be physically realistic, so you can go wild with your imaginations! Here we show some examples that we thought of, and include the source and target defocus maps used for each example. <br/></body>
+  
+            <!-- <div id="comparison">
+              <figure>
+                <div id="divisor"></div>
+              </figure>
+              <input type="range" min="0" max="100" value="50" id="compare_slider" oninput="moveDivisor()">
+            </div> -->
+  
+            <h3 class="title is-4">Tilt shift effect</h3>
+            <body><a href="https://www.adobe.com/creativecloud/photography/discover/tilt-shift-photography.html"> Tilt shift </a> can be used to control the depth of field, and produce miniature-like effect. With hardware, it is done by tilting the lens with respect to the sensor, but here we simulate it by setting the target defocus map to correspond to a very narrow DoF. At the top of the image below, you can view the source defocus map (all-in-focus so all black) and target defocus map used for this example. </body>
+            <div class="compare">
+              <!-- The before image is first -->
+              <img class="slider-image" src="./static/images/tiltshift_input_def_labelled.jpg"/>
+              <!-- The after image is last -->
+              <img class="slider-image" src="./static/images/tiltshift_output_def_labelled.jpg" />
+              
+             </div>
+             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5">Input</h3></label>
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Output</h3></label>
+             </div>
+  
+             <h3 class="title is-4">Split focus effect</h3>
+             <body><a href="https://www.studiobinder.com/blog/split-diopter-lens/">Split focus</a> is a cinematic effect used in movies to emphasize and focus on two subjects at different distances from the camera. It often requires custom lens to make it work with hardware, but we can simply do it in software with our method. Here we set the left half of the photo to be focused on the woman, and the right half is focused on the man and with a reduced DoF for emphasis. You can compare the source defocus map and target defocus map used to generate this photo.</body>
+             <div class="twentytwenty-container" id="images_t">
+              <!-- The before image is first -->
+              <img class="slider-image" src="./static/images/splitfocus_input_def_labelled.jpg" />
+              <!-- The after image is last -->
+              <img class="slider-image" src="./static/images/splitfocus_output_def_labelled.jpg" />
+             </div>
+          <script>
+      
+          $(window).on('load',function() {
+            $("#images_t").twentytwenty({
+      default_offset_pct: 0.5, // How much of the before image is visible when the page loads
+      orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
+      before_label: 'Input', // Set a custom before label
+      after_label: 'Output', // Set a custom after label
+      no_overlay: true, //Do not show the overlay with before and after
+      move_slider_on_hover: true, // Move slider on mouse hover?
+      move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
+      click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
+    });
+          });
+          </script>
+  
+             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5">Input</h3></label>
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Output</h3></label>
+             </div>
+  
+             <h3 class="title is-4">Content driven defocus control</h3>
+             <body>Here we choose to highlight the woman and dog by simply setting them to be all-in-focus and blur out everything else. We simply set the target defocus map to be the segmentation mask we created.</body>
+             <center>
+             <div class="compare" style=" width: 65%;">
+              <!-- The before image is first -->
+              <img class="slider-image" src="./static/images/seg_mask_input_def_labelled.jpg"/>
+              <!-- The after image is last -->
+              <img class="slider-image" src="./static/images/seg_mask_output_def_labelled.jpg"/>
+             </div>
+            </center>
+  
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <label class="label" style="width: 20%; margin: 0; padding: 0; text-align: left;"></label>
+              <label class="label" style="width: 30%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5">Input</h3></label>
+              <label class="label" style="width: 30%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Output</h3></label>
+              <label class="label" style="width: 20%; margin: 0; padding: 0; text-align: left;"></label>
+             </div>
+  
+            <!-- <div id="comparison_splitfocus">
+              <figure>
+                <div id="divisor"></div>
+              </figure>
+              <input type="range" min="0" max="100" value="50" id="compare_slider" oninput="moveDivisorSplitfocus()">
+            </div> -->
+            
+  
+            <!-- <body>
+              <div class='container'>
+                <div class='img background-img'></div>
+                <div class='img foreground-img'></div>
+                <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider_before_after">
+                <div class='slider-button'></div>
+              </div>
+            </body> -->
+  
+            <!-- <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/tiltshift_src_w.jpg" border="1"></label>
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/tiltshift_output.jpg" border="1"></label>
+            </div> -->
+  <!-- 
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/split_focus_input.jpg" border="1"></label>
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/split_focus_output.jpg" border="1"></label>
+            </div>
+  
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/seg_mask_input.jpg" border="1"></label>
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/seg_mask_output.jpg" border="1"></label>
+            </div> -->
+            
+          </div>
+        </div>
+      </div>
+  
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> -->
+      <!--/ Paper video. -->
+    </div>
+  </section>
+  
+  <!-- <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title">Quantitative Evaluation</h2>
+    </div>
+  </div>
+  
+    <section class="section" id="References">
+      <div class="container is-max-desktop content">
+        <h2 class="title">References</h2>
+      </div>
+    </section> -->
+  
+  
+  
+  
+  
+  
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{alzayer2023defocuscontrol,
+        title={DC2: Dual-Camera Defocus Control by Learning to Refocus},
+        author={Alzayer, Hadi and Abuolaim, Abdullah and Chun Chan, Leung and Yang, Yang and Chen Lou, Ying and Huang, Jia-Bin and Kar, Abhishek},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        pages={--},
+        year={2023}
+      }</code></pre>
+  </div>
+  </section>
+  
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link"
+           href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+            This great website template was borrowed from <a
+            href="https://github.com/nerfies/nerfies.github.io">nerfies</a> and <a
+            href="https://github.com/defocus-control/defocus-control.github.io">DC<sup>2</sup></a>!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
