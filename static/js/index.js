@@ -225,31 +225,56 @@ function moveDivisor() {
 }
 
 function changedata(parameter){
-  if(parameter == 0){
-      // Show Tokyo_16k and hide girl_16k
-      document.getElementById('Tokyo_16k').style.display = 'block';
-      document.getElementById('girl_16k').style.display = 'none';
+  if(parameter==0){
+      document.getElementById('girl16k').style.display = 'none';
+      document.getElementById('tokyo16k').style.display = 'block';
       document.getElementById('example1_btn').className = 'btn active';
       document.getElementById('example2_btn').className = 'btn';
-       // Update images for Tokyo
-      document.querySelector('#Tokyo_16k .compare .slider-image:first-child').src = "./static/images/tokyo_compression_colors_small_4k/CP.png";
-      document.querySelector('#Tokyo_16k .compare .slider-image:last-child').src = "./static/images/tokyo_compression_colors_small_4k/TT_up.png";
   }
-  else if(parameter == 1){
-      // Show girl_16k and hide Tokyo_16k
-      document.getElementById('girl_16k').style.display = 'block';
-      document.getElementById('Tokyo_16k').style.display = 'none';
+  else if(parameter==1){
+      document.getElementById('tokyo16k').style.display = 'none';
+      document.getElementById('girl16k').style.display = 'block';
       document.getElementById('example1_btn').className = 'btn';
       document.getElementById('example2_btn').className = 'btn active';
-      // Update images for Girl
-      document.querySelector('#girl_16k .compare .slider-image:first-child').src = "./static/images/girl_compression16k/CP_girl.png";
-      document.querySelector('#girl_16k .compare .slider-image:last-child').src = "./static/images/girl_compression16k/TT_up_girl.png";
   }
-
   this.className += " active";
 }
 
+function showExampleIncompleteData(exampleId, buttonId) {
+  // Hide all examples
+  document.getElementById('example1').style.display = 'none';
+  document.getElementById('example2').style.display = 'none';
+  document.getElementById('example3').style.display = 'none';
 
+  // Remove 'active' class from all buttons
+  document.getElementById('btn1').classList.remove('active');
+  document.getElementById('btn2').classList.remove('active');
+  document.getElementById('btn3').classList.remove('active');
+
+  // Add 'active' class to clicked button
+  document.getElementById(buttonId).classList.add('active');
+
+  // Show the selected example
+  document.getElementById(exampleId).style.display = 'block';
+}
+
+function showExampleNoisyData(exampleId, buttonId) {
+  // Hide all examples
+  document.getElementById('example1_noise').style.display = 'none';
+  document.getElementById('example2_noise').style.display = 'none';
+  document.getElementById('example3_noise').style.display = 'none';
+
+  // Remove 'active' class from all buttons
+  document.getElementById('btn1_noise').classList.remove('active');
+  document.getElementById('btn2_noise').classList.remove('active');
+  document.getElementById('btn3_noise').classList.remove('active');
+
+  // Add 'active' class to clicked button
+  document.getElementById(buttonId).classList.add('active');
+
+  // Show the selected example
+  document.getElementById(exampleId).style.display = 'block';
+}
 
 function changeexample(image_to_show, image_to_hide, btn_to_active, btn_to_normal){
       document.getElementById(image_to_show).style.display = 'block';
@@ -348,7 +373,8 @@ setTimeout(function() {
   // });
   window.dispatchEvent(new Event('resize')); 
   console.log("loaded after tiemout");
-  document.getElementById('girl_16k').style.display = 'none';
+  document.getElementById('girl16k').style.display = 'none';
+  // document.getElementById('tokyo16').style.display = 'none';
   }, 2000);
 
 // $(window).load(function() {

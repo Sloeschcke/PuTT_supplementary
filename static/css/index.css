@@ -167,9 +167,42 @@ body {
   margin: 0 auto; /* Center the grid container on the page */
 }
 
+.image-line {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  grid-template-rows: auto auto; /* Two rows, height adjusts to content */
+  gap: 2px; /* Space between grid items */
+  justify-content: space-around; /* Center the grid horizontally */
+  align-items: center; /* Center grid items vertically */
+  width:100%; /* Grid occupies 80% of the page width */
+  margin: 0 auto; /* Center the grid container on the page */
+}
+/* make fill 33% procent */
+.image-single{
+  width: 33%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+
 .image-container {
   text-align: center; /* Center image and title within the container */
+  cursor: pointer; /* Indicates clickable item */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
+
+.image-container:hover {
+transform: scale(1.01); /* Slightly enlarge on hover */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
 
 .image-container img {
   width: 100%; /* Images fill the width of their containers */
@@ -179,4 +212,30 @@ body {
 .image-title {
   display: block;
   margin-top: 8px;
+}
+
+/* Style for normal button */
+.btn {
+  /* Your existing styles for .btn */
+  background-color: #f0f0f0; /* Default background */
+  color: black;
+  /* Add other styles as needed */
+}
+
+/* Hover effect for all buttons */
+.btn:hover {
+  background-color: #6ca0f4 !important; /* Light blue on hover */
+  color: white !important;
+}
+
+/* Active button style */
+.btn.active {
+  background-color: #336BB4; /* Active color */
+  color: white;
+}
+
+/* Hover effect specifically for active button */
+.btn.active:hover {
+  background-color: #6ca0f4 !important; /* Light blue also for active button on hover */
+  color: white !important;
 }
