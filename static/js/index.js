@@ -298,8 +298,6 @@ function toggleimage3(img1, img2, img3, btn1, btn2, btn3, img_slider, img_slider
     var button2 = document.getElementById(btn2);
     var button3 = document.getElementById(btn3);
     var sliderImages = document.querySelectorAll('.compare .slider-image');
-    // var baselineModelName = document.querySelector('.field-body .label a');
-    var baselineModelName = document.getElementById('baseline-model-name');
 
     // Hide all images
     image1.style.display = 'none';
@@ -317,19 +315,16 @@ function toggleimage3(img1, img2, img3, btn1, btn2, btn3, img_slider, img_slider
         image1.style.display = 'block';
         sliderImages[0].src = img_slider;
         sliderImages[1].src = img_slider_target;
-        baselineModelName.textContent = 'CP'; // Update the baseline model name for CP
     } else if (btn2 === event.currentTarget.id) {
         button2.classList.add('active');
         image2.style.display = 'block';
         sliderImages[0].src = img_slider;
         sliderImages[1].src = img_slider_target;
-        baselineModelName.textContent = 'Tucker'; // Update the baseline model name for Tucker
     } else if (btn3 === event.currentTarget.id) {
         button3.classList.add('active');
         image3.style.display = 'block';
         sliderImages[0].src = img_slider;
         sliderImages[1].src = img_slider_target;
-        baselineModelName.textContent = 'TT No Upsampling'; // Update the baseline model name for Tucker + CP
     }
 }
 
