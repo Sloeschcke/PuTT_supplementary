@@ -61,17 +61,7 @@
               <h2 class="title is-3">CVPR 2024</h2>
               <!-- <span class="author-block"><sup></span> -->
             </div>
-            <script>
-              $(document).ready(function () {
-                // var $zoom = $('.zoom').magnify(
-                // //   {
-                // //   magnifiedWidth: 1000,
-                // //   magnifiedHeight: 753
-                // // }
-                // );
-                // $zoom.destroy();
-              });
-            </script>
+           
             <style>
               .magnify>.magnify-lens {
                 width: 130px;
@@ -91,184 +81,50 @@
                 border-radius: 8px;
               }
 
-              /* Style the active class, and buttons on mouse-over */
-              .active,
-              .btn:hover {
-                background-color: #666;
-                color: white;
-              }
-
-              /* .twentytwenty-container {
-      min-height: 200px;
-  } */
             </style>
 
-            <!-- <a href="./images/teaser.png">
-              <img id="sample-teaser" src="./images/teaser.png" alt="Sample image" class="zoom">
-            </a> -->
-
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- PDF Link. -->
-                <!-- arxiv Link add TODO. -->
-                <span class="link-block">
-                  <a href="./static/dc2_paper.pdf" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <!-- arxiv Link add TODO. -->
-                  <a href="https://t.co/bJnAWGcT8b" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                <!-- Video Link. -->
-                <span class="link-block">
-                  <a href="https://youtu.be/q9_tM6_5Nq8" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
-                <!-- Code Link TODO. -->
-                <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="hero is-light is-small">
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <!-- # make newline  in title-->
-          <h2 class="title is-3">Tokyo 16k Image Reconstruction <br> Compression Ratio: 200X</h2>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column video-container">
+            <video poster="" id="teaser" autoplay controls muted loop playsinline>
+              <source src="./videos_compressed/Girl_16k_mov8sek_squaare.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column video-container">
+            <video poster="" id="plant" autoplay controls muted loop playsinline>
+              <source src="./videos_compressed/PuTT_Chair.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
-      <div class="image-grid">
-        <div class="image-container">
-          <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
-            <h3 class="title is-5">PuTT </h3>
-          </label>
-          <img src="./static/images/tokyo_compression_colors_small_4k//TT_up.png" alt="TT up tokyo16k"
-            onclick="openFullscreen(this);">
-        </div>
-        <div class="image-container">
-          <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
-            <h3 class="title is-5">TT No Upsampling </h3>
-          </label>
-
-          <img src="./static/images/tokyo_compression_colors_small_4k//TT_noup.png" alt="TT noup tokyo16k"
-            onclick="openFullscreen(this);">
-        </div>
-        <div class="image-container">
-          <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
-            <h3 class="title is-5">Tucker</h3>
-          </label>
-          <img src="./static/images/tokyo_compression_colors_small_4k//Tucker.png" alt="Tucker up tokyo16k"
-            onclick="openFullscreen(this);">
-        </div>
-        <div class="image-container">
-          <label class="label" style="width: 100%; margin: 0; padding: 0; text-align: center;">
-            <h3 class="title is-5">CP</h3>
-          </label>
-          <img src="./static/images/tokyo_compression_colors_small_4k/CP.png" alt="CP up tokyo16k"
-            onclick="openFullscreen(this);">
-        </div>
+      <div class="columns is-centered has-text-centered" style="text-align: center;">  
+        <p><br/> Hey</p> 
       </div>
     </div>
 
 
-
-
   </section>
-
-
-
+  
 
 
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            The ability to learn compact, high-quality, and easy-to-optimize representations for visual data is
-            paramount to many applications such as novel view synthesis and 3D reconstruction. Recent work has shown
-            substantial success in using tensor networks to design such compact and high-quality representations.
-            However, the ability to optimize tensor-based representations, and in particular, the highly compact tensor
-            train representation, is still lacking. This has prevented practitioners from deploying the full potential
-            of tensor networks for visual data.
-            To this end, we propose `Prolongation Upsampling Tensor Train (PuTT)', a novel method for learning tensor
-            train representations in a coarse-to-fine manner. Our method involves the prolonging or `upsampling' of a
-            learned tensor train representation, creating a sequence of `coarse-to-fine' tensor trains that are
-            incrementally refined.
-            We evaluate our representation along three axes: (1). compression, (2). robustness to noisy data, and (3).
-            learning from incomplete or missing data. To assess these axes, we consider the tasks of image fitting, 3D
-            fitting, and novel view synthesis, where our method shows an improved performance compared to
-            state-of-the-art tensor-based methods.
-          </div>
-        </div>
-      </div>
-      <!--/ Abstract. -->
+    
 
 
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Overview</h2>
-          <div class="content has-text-justified">
-            We want to train TTs
-            <br> <br>
-            <center>
-              <img src="./static/images/main_figures/Train.png" width="500">
-            </center>
-            <br>
-            We use a prolongation operator to upsample the learned representation
-            <br> <br>
-            <center>
-              <img src="./static/images/main_figures/prolongation.png" width="500">
-            </center>
-
-            <br>
-
-            We train In a Coarse-To-Fine manner
-
-            <br> <br>
-
-            <center>
-              <img src="./static/images/main_figures/Coarse-to-fine.png" width="500">
-            </center>
-
-          </div>
-        </div>
-      </div>
-
-
-
-      <h3 class="title is-4">Compression 16k Images - Compression Factor: 200X</h3>
+      
+      <h2 class="title is-3">Compression 2D</h2>
+      <h2 class="title is-4">Compression Ratio: 200X</h2>
 
       <button class="btn active" id="example1_btn" onclick="changedata(0)">Tokyo - 16k</button>
       <button class="btn" id="example2_btn" onclick="changedata(1)">Girl With Pearl Earrings - 16k</button>
@@ -278,21 +134,21 @@
         <div class="field-body"
           style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
           <label class="label" id="example1_CP" style="width: 49%; vertical-jpg: middle;margin: 0; padding: 0;">
-            <img src="./static/images/tokyo_compression_colors_small_4k/CP.png" border="1" class="zoom">
+            <img src="./static/images/tokyo_compression_colors_small_4k/CP.png" border="1" class="zoom" onclick="openFullscreen(this);">
           </label>
 
           <label class="label" id="example1_Tucker"
             style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-            <img src="./static/images/tokyo_compression_colors_small_4k/Tucker.png" border="1" class="zoom">
+            <img src="./static/images/tokyo_compression_colors_small_4k/Tucker.png" border="1" class="zoom" onclick="openFullscreen(this);">
           </label>
           <label class="label" id="example1_TT_noup"
             style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-            <img src="./static/images/tokyo_compression_colors_small_4k/TT_noup.png" border="1" class="zoom">
+            <img src="./static/images/tokyo_compression_colors_small_4k/TT_noup.png" border="1" class="zoom" onclick="openFullscreen(this);">
           </label>
 
 
           <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-            <img src="./static/images/tokyo_compression_colors_small_4k/TT_up.png" border="1" class="zoom"></label>
+            <img src="./static/images/tokyo_compression_colors_small_4k/TT_up.png" border="1" class="zoom" onclick="openFullscreen(this);"></label>
         </div>
         <!-- <img src=" border="1" class="zoom"> -->
         <div class="field-body"
@@ -323,18 +179,18 @@
         <div class="field-body"
           style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
           <label class="label" id="example2_CP" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-            <img src="./static/images/girl_compression16k/CP_girl.png" border="1" class="zoom">
+            <img src="./static/images/girl_compression16k/CP_girl.png" border="1" class="zoom" onclick="openFullscreen(this);">
           </label>
           <label class="label" id="example2_Tucker"
             style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-            <img src="./static/images/girl_compression16k/Tucker.png" border="1" class="zoom">
+            <img src="./static/images/girl_compression16k/Tucker.png" border="1" class="zoom" onclick="openFullscreen(this);">
           </label>
           <label class="label" id="example2_TT_noup"
             style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-            <img src="./static/images/girl_compression16k/TT_noup.png" border="1" class="zoom">
+            <img src="./static/images/girl_compression16k/TT_noup.png" border="1" class="zoom" onclick="openFullscreen(this);">
           </label>
           <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-            <img src="./static/images/girl_compression16k/TT_up.png" border="1" class="zoom"></label>
+            <img src="./static/images/girl_compression16k/TT_up.png" border="1" class="zoom" onclick="openFullscreen(this);"></label>
         </div>
         <!-- <img src=" border="1" class="zoom"> -->
         <div class="field-body"
@@ -395,7 +251,7 @@
             <label class="label" style="margin: 0; padding: 0; text-align: center;">
               <h3 class="title is-5">Input Data 99% Missing </h3>
             </label>
-            <img src="./static/images/incomplete_data_vs_models/incomplete_inputs/noisy_target_scale_0.01.png"
+            <img src="./static/images/incomplete_data_vs_models/incomplete_inputs/noisy_target_scale_0.01.png" border="1"
               alt="99% Missing" onclick="openFullscreen(this);">
           </div>
 
@@ -403,7 +259,7 @@
             <label class="label" style="margin: 0; padding: 0; text-align: center;">
               <h3 class="title is-5">Input Data 95% Missing</h3>
             </label>
-            <img src="./static/images/incomplete_data_vs_models/incomplete_inputs/noisy_target_scale_0.05.png"
+            <img src="./static/images/incomplete_data_vs_models/incomplete_inputs/noisy_target_scale_0.05.png" border="1"
               alt="90% Missing" onclick="openFullscreen(this);">
           </div>
 
@@ -411,8 +267,8 @@
             <label class="label" style="margin: 0; padding: 0; text-align: center;">
               <h3 class="title is-5">Input Data 90% Missing</h3>
             </label>
-            <img src="./static/images/incomplete_data_vs_models/incomplete_inputs/noisy_target_scale_0.1.png"
-              alt="50% Missing" onclick="openFullscreen(this);">
+            <img src="./static/images/incomplete_data_vs_models/incomplete_inputs/noisy_target_scale_0.1.png" border="1"
+              alt="50% Missing" onclick="openFullscreen(this);"> 
           </div>
         </div>
 
@@ -440,7 +296,7 @@
                   <h3 class="title is-5">PuTT </h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.01/TT_up_0.01_Image_iteration_8191_psnr_23.62_ssim_0.63.png"
+                  src="./static/images/incomplete_data_vs_models/0.01/TT_up_0.01_Image_iteration_8191_psnr_23.62_ssim_0.63.png" border="1"
                   alt="PuTT" onclick="openFullscreen(this);">
               </div>
 
@@ -449,7 +305,7 @@
                   <h3 class="title is-5">CP</h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.01/cp_up_0.01_Image_iteration_8191_psnr_21.316_ssim_0.386.png"
+                  src="./static/images/incomplete_data_vs_models/0.01/cp_up_0.01_Image_iteration_8191_psnr_21.316_ssim_0.386.png" border="1"
                   alt="TT noup tokyo16k" onclick="openFullscreen(this);">
               </div>
 
@@ -458,7 +314,7 @@
                   <h3 class="title is-5">Tucker</h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.01/Tucker_up_0.01_Image_iteration_8191_psnr_21.21_ssim_0.359.png"
+                  src="./static/images/incomplete_data_vs_models/0.01/Tucker_up_0.01_Image_iteration_8191_psnr_21.21_ssim_0.359.png" border="1"
                   alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
               </div>
             </div>
@@ -466,7 +322,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.01/TT_noup_0.01_Image_iteration_8191_psnr_4.595_ssim_0.006.png"
+                  src="./static/images/incomplete_data_vs_models/0.01/TT_noup_0.01_Image_iteration_8191_psnr_4.595_ssim_0.006.png" border="1"
                   alt="PuTT" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">TT No Upsampling </h3>
@@ -475,7 +331,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.01/cp_noup_0.01_Image_iteration_8191_psnr_7.348_ssim_0.022.png"
+                  src="./static/images/incomplete_data_vs_models/0.01/cp_noup_0.01_Image_iteration_8191_psnr_7.348_ssim_0.022.png" border="1"
                   alt="TT noup tokyo16k" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">CP No Upsampling </h3>
@@ -484,7 +340,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.01/Tucker_noup_0.01_Image_iteration_8191_psnr_8.206_ssim_0.014.png"
+                  src="./static/images/incomplete_data_vs_models/0.01/Tucker_noup_0.01_Image_iteration_8191_psnr_8.206_ssim_0.014.png" border="1"
                   alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">Tucker No Upsampling </h3>
@@ -504,7 +360,7 @@
                   <h3 class="title is-5">PuTT </h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.05/TT_up_0.05_Image_iteration_8191_psnr_30.367_ssim_0.806.png"
+                  src="./static/images/incomplete_data_vs_models/0.05/TT_up_0.05_Image_iteration_8191_psnr_30.367_ssim_0.806.png" border="1"
                   alt="PuTT" onclick="openFullscreen(this);">
               </div>
 
@@ -513,8 +369,8 @@
                   <h3 class="title is-5">CP</h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.05/CP_up_0.05_Image_iteration_8191_psnr_26.638_ssim_0.682.png"
-                  alt="TT noup tokyo16k" onclick="openFullscreen(this);">
+                  src="./static/images/incomplete_data_vs_models/0.05/CP_up_0.05_Image_iteration_8191_psnr_26.638_ssim_0.682.png" border="1"
+                  alt="TT noup tokyo16k" onclick="openFullscreen(this);"> 
               </div>
 
               <div class="image-container">
@@ -522,7 +378,7 @@
                   <h3 class="title is-5">Tucker</h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.05/Tucker_up_0.05_Image_iteration_8191_psnr_26.544_ssim_0.666.png"
+                  src="./static/images/incomplete_data_vs_models/0.05/Tucker_up_0.05_Image_iteration_8191_psnr_26.544_ssim_0.666.png" border="1"
                   alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
               </div>
             </div>
@@ -530,7 +386,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.05/TT_noup_0.05_Image_iteration_8191_psnr_26.24_ssim_0.649.png"
+                  src="./static/images/incomplete_data_vs_models/0.05/TT_noup_0.05_Image_iteration_8191_psnr_26.24_ssim_0.649.png" border="1"
                   alt="PuTT" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">TT No Upsampling </h3>
@@ -539,7 +395,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.05/CP_noup_0.05_Image_iteration_8191_psnr_16.168_ssim_0.132.png"
+                  src="./static/images/incomplete_data_vs_models/0.05/CP_noup_0.05_Image_iteration_8191_psnr_16.168_ssim_0.132.png" border="1"
                   alt="TT noup tokyo16k" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">CP No Upsampling </h3>
@@ -548,7 +404,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.05/Tucker_noup_0.05_Image_iteration_8191_psnr_21.403_ssim_0.381.png"
+                  src="./static/images/incomplete_data_vs_models/0.05/Tucker_noup_0.05_Image_iteration_8191_psnr_21.403_ssim_0.381.png" border="1"
                   alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">Tucker No Upsampling </h3>
@@ -568,7 +424,7 @@
                   <h3 class="title is-5">PuTT </h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.1/TT_up_0.1_Image_iteration_8191_psnr_21.762_ssim_0.726.png"
+                  src="./static/images/incomplete_data_vs_models/0.1/TT_up_0.1_Image_iteration_8191_psnr_21.762_ssim_0.726.png" border="1"
                   alt="PuTT" onclick="openFullscreen(this);">
               </div>
 
@@ -577,7 +433,7 @@
                   <h3 class="title is-5">CP</h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.1/CP_up_0.1_Image_iteration_8191_psnr_18.397_ssim_0.465.png"
+                  src="./static/images/incomplete_data_vs_models/0.1/CP_up_0.1_Image_iteration_8191_psnr_18.397_ssim_0.465.png" border="1"
                   alt="TT noup tokyo16k" onclick="openFullscreen(this);">
               </div>
 
@@ -586,7 +442,7 @@
                   <h3 class="title is-5">Tucker</h3>
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.1/Tucker_up_0.1_Image_iteration_8191_psnr_18.781_ssim_0.493.png"
+                  src="./static/images/incomplete_data_vs_models/0.1/Tucker_up_0.1_Image_iteration_8191_psnr_18.781_ssim_0.493.png" border="1"
                   alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
               </div>
             </div>
@@ -594,7 +450,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.1/TT_noup_0.1_Image_iteration_8191_psnr_19.032_ssim_0.596.png"
+                  src="./static/images/incomplete_data_vs_models/0.1/TT_noup_0.1_Image_iteration_8191_psnr_19.032_ssim_0.596.png" border="1"
                   alt="PuTT" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">TT No Upsampling </h3>
@@ -603,7 +459,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.1/CP_noup_0.1_Image_iteration_8191_psnr_13.945_ssim_0.194.png"
+                  src="./static/images/incomplete_data_vs_models/0.1/CP_noup_0.1_Image_iteration_8191_psnr_13.945_ssim_0.194.png" border="1"
                   alt="TT noup tokyo16k" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">CP No Upsampling </h3>
@@ -612,7 +468,7 @@
               <div class="image-container">
                 </label>
                 <img
-                  src="./static/images/incomplete_data_vs_models/0.1/Tucker_noup_0.1_Image_iteration_8191_psnr_15.463_ssim_0.253.png"
+                  src="./static/images/incomplete_data_vs_models/0.1/Tucker_noup_0.1_Image_iteration_8191_psnr_15.463_ssim_0.253.png" border="1"
                   alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
                 <label class="label" style="margin: 0; padding: 0; text-align: center;">
                   <h3 class="title is-5">Tucker No Upsampling </h3>
@@ -645,7 +501,7 @@
           <label class="label" style="margin: 0; padding: 0; text-align: center;">
             <h3 class="title is-5">Noise Level 0.1 </h3>
           </label>
-          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/westerlund_4k_0.1.png" alt="0.1Noise"
+          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/westerlund_4k_0.1.png" alt="0.1Noise" border="1"
             onclick="openFullscreen(this);">
         </div>
 
@@ -653,7 +509,7 @@
           <label class="label" style="margin: 0; padding: 0; text-align: center;">
             <h3 class="title is-5">Noise Level 0.5</h3>
           </label>
-          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/tokyo_4k_0.5.png" alt="0.5noise"
+          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/tokyo_4k_0.5.png" alt="0.5noise" border="1"
             onclick="openFullscreen(this);">
         </div>
 
@@ -661,7 +517,7 @@
           <label class="label" style="margin: 0; padding: 0; text-align: center;">
             <h3 class="title is-5">Noise Level 1.0</h3>
           </label>
-          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/marseille_4k_1.0.png" alt="1.0noise"
+          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/marseille_4k_1.0.png" alt="1.0noise" border="1"
             onclick="openFullscreen(this);">
         </div>
       </div>
@@ -694,7 +550,7 @@
                 <h3 class="title is-5">PuTT </h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/1.0/TT_up_noise_1_Image_iteration_8191_psnr_12.659_ssim_0.211.png"
+                src="./static/images/Noise_color_mixed_images/1.0/TT_up_noise_1_Image_iteration_8191_psnr_12.659_ssim_0.211.png" border="1"
                 alt="PuTT" onclick="openFullscreen(this);">
             </div>
 
@@ -703,7 +559,7 @@
                 <h3 class="title is-5">CP</h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/1.0/CP_up_noise_1_Image_iteration_8191_psnr_11.066_ssim_0.118.png"
+                src="./static/images/Noise_color_mixed_images/1.0/CP_up_noise_1_Image_iteration_8191_psnr_11.066_ssim_0.118.png" border="1"
                 alt="TT noup tokyo16k" onclick="openFullscreen(this);">
             </div>
 
@@ -712,7 +568,7 @@
                 <h3 class="title is-5">Tucker</h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/1.0/Tucker_up_noise_1_Image_iteration_8191_psnr_11.986_ssim_0.165.png"
+                src="./static/images/Noise_color_mixed_images/1.0/Tucker_up_noise_1_Image_iteration_8191_psnr_11.986_ssim_0.165.png" border="1"
                 alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
             </div>
           </div>
@@ -720,7 +576,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/1.0/TT_noup_noise_1_Image_iteration_8191_psnr_12.247_ssim_0.142.png"
+                src="./static/images/Noise_color_mixed_images/1.0/TT_noup_noise_1_Image_iteration_8191_psnr_12.247_ssim_0.142.png" border="1"
                 alt="PuTT" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">TT No Upsampling </h3>
@@ -729,7 +585,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/1.0/CP_noup_noise_1_Image_iteration_8191_psnr_7.074_ssim_0.042.png"
+                src="./static/images/Noise_color_mixed_images/1.0/CP_noup_noise_1_Image_iteration_8191_psnr_7.074_ssim_0.042.png" border="1"
                 alt="TT noup tokyo16k" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">CP No Upsampling </h3>
@@ -738,7 +594,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/1.0/Tucker_noup_noise_1_Image_iteration_8191_psnr_10.591_ssim_0.073.png"
+                src="./static/images/Noise_color_mixed_images/1.0/Tucker_noup_noise_1_Image_iteration_8191_psnr_10.591_ssim_0.073.png" border="1"
                 alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">Tucker No Upsampling </h3>
@@ -758,7 +614,7 @@
                 <h3 class="title is-5">PuTT </h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.5/TT_up_noise_0.5_Image_iteration_8191_psnr_18.688_ssim_0.561.png"
+                src="./static/images/Noise_color_mixed_images/0.5/TT_up_noise_0.5_Image_iteration_8191_psnr_18.688_ssim_0.561.png" border="1"
                 alt="PuTT" onclick="openFullscreen(this);">
             </div>
 
@@ -767,8 +623,8 @@
                 <h3 class="title is-5">CP</h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.5/CP_up_noise_0.5_Image_iteration_8191_psnr_17.996_ssim_0.482.png"
-                alt="TT noup tokyo16k" onclick="openFullscreen(this);">
+                src="./static/images/Noise_color_mixed_images/0.5/CP_up_noise_0.5_Image_iteration_8191_psnr_17.996_ssim_0.482.png" border="1"
+                alt="TT noup tokyo16k" onclick="openFullscreen(this);"> 
             </div>
 
             <div class="image-container">
@@ -776,7 +632,7 @@
                 <h3 class="title is-5">Tucker</h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.5/Tucker_up_noise_0.5_Image_iteration_8191_psnr_17.592_ssim_0.409.png"
+                src="./static/images/Noise_color_mixed_images/0.5/Tucker_up_noise_0.5_Image_iteration_8191_psnr_17.592_ssim_0.409.png" border="1"
                 alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
             </div>
           </div>
@@ -784,7 +640,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.5/TT_noup_noise_0.5_Image_iteration_8191_psnr_17.338_ssim_0.393.png"
+                src="./static/images/Noise_color_mixed_images/0.5/TT_noup_noise_0.5_Image_iteration_8191_psnr_17.338_ssim_0.393.png" border="1"
                 alt="PuTT" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">TT No Upsampling </h3>
@@ -793,7 +649,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.5/CP_noup_noise_0.5_Image_iteration_8191_psnr_14.907_ssim_0.165.png"
+                src="./static/images/Noise_color_mixed_images/0.5/CP_noup_noise_0.5_Image_iteration_8191_psnr_14.907_ssim_0.165.png" border="1"
                 alt="TT noup tokyo16k" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">CP No Upsampling </h3>
@@ -802,7 +658,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.5/Tucker_noup_noise_0.5_Image_iteration_8191_psnr_14.231_ssim_0.172.png"
+                src="./static/images/Noise_color_mixed_images/0.5/Tucker_noup_noise_0.5_Image_iteration_8191_psnr_14.231_ssim_0.172.png" border="1"
                 alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">Tucker No Upsampling </h3>
@@ -824,7 +680,7 @@
                 <h3 class="title is-5">PuTT </h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.1/TT_up_noise_0.1_Image_iteration_8191_psnr_28.937_ssim_0.807.png"
+                src="./static/images/Noise_color_mixed_images/0.1/TT_up_noise_0.1_Image_iteration_8191_psnr_28.937_ssim_0.807.png" border="1"
                 alt="PuTT" onclick="openFullscreen(this);">
             </div>
 
@@ -833,7 +689,7 @@
                 <h3 class="title is-5">CP</h3>
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.1/CP_up_noise_0.1_Image_iteration_8191_psnr_25.573_ssim_0.654.png"
+                src="./static/images/Noise_color_mixed_images/0.1/CP_up_noise_0.1_Image_iteration_8191_psnr_25.573_ssim_0.654.png" border="1"
                 alt="TT noup tokyo16k" onclick="openFullscreen(this);">
             </div>
 
@@ -841,8 +697,8 @@
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">Tucker</h3>
               </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.1/Tucker_up_noise_0.1_Image_iteration_8191_psnr_25.298_ssim_0.638.png"
+              <img 
+                src="./static/images/Noise_color_mixed_images/0.1/Tucker_up_noise_0.1_Image_iteration_8191_psnr_25.298_ssim_0.638.png" border="1"
                 alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
             </div>
           </div>
@@ -850,7 +706,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.1/TT_noup_noise_0.1_Image_iteration_8191_psnr_26.348_ssim_0.714.png"
+                src="./static/images/Noise_color_mixed_images/0.1/TT_noup_noise_0.1_Image_iteration_8191_psnr_26.348_ssim_0.714.png" border="1"
                 alt="PuTT" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">TT No Upsampling </h3>
@@ -859,7 +715,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.1/CP_noup_noise_0.1_Image_iteration_8191_psnr_24.184_ssim_0.577.png"
+                src="./static/images/Noise_color_mixed_images/0.1/CP_noup_noise_0.1_Image_iteration_8191_psnr_24.184_ssim_0.577.png" border="1"
                 alt="TT noup tokyo16k" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">CP No Upsampling </h3>
@@ -868,7 +724,7 @@
             <div class="image-container">
               </label>
               <img
-                src="./static/images/Noise_color_mixed_images/0.1/Tucker_noup_noise_0.1_Image_iteration_8191_psnr_22.717_ssim_0.483.png"
+                src="./static/images/Noise_color_mixed_images/0.1/Tucker_noup_noise_0.1_Image_iteration_8191_psnr_22.717_ssim_0.483.png" border="1"
                 alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
               <label class="label" style="margin: 0; padding: 0; text-align: center;">
                 <h3 class="title is-5">Tucker No Upsampling </h3>
@@ -900,10 +756,10 @@
 
         <div class="compare" style="text-align: center;">
           <img class="slider-image"
-            src="./static/images/number_upsamplings_noisy_data/TT_0up_TT_noise0.5Image_iteration_8191_psnr_15.989_ssim_0.196.png"
+            src="./static/images/number_upsamplings_noisy_data/TT_0up_TT_noise0.5Image_iteration_8191_psnr_15.989_ssim_0.196.png" border="1"
             alt="0 Upsampling Steps">
           <img class="slider-image"
-            src="./static/images/number_upsamplings_noisy_data/TT_7up_TT_noise0.5_Image_iteration_8191_psnr_16.204_ssim_0.281.png"
+            src="./static/images/number_upsamplings_noisy_data/TT_7up_TT_noise0.5_Image_iteration_8191_psnr_16.204_ssim_0.281.png" border="1"
             alt="7 Upsampling Steps">
         </div>
 
@@ -921,26 +777,61 @@
     </div>
 
 
-    <script>
+  </section>
 
-      $(window).on('load', function () {
-        $("#images_t").twentytwenty({
-          default_offset_pct: 0.5, // How much of the before image is visible when the page loads
-          orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
-          before_label: 'Input', // Set a custom before label
-          after_label: 'Output', // Set a custom after label
-          no_overlay: true, //Do not show the overlay with before and after
-          move_slider_on_hover: true, // Move slider on mouse hover?
-          move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
-          click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
-        });
-      });
-    </script>
+
+  <!-- FIGURES FROM PAPER -->
+
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <!-- Title Upsampling Steps -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h3 class="title is-3">Figure X</h3>
+          </div>
+        </div>
+
+        <div class="has-text-centered">
+          <p>Figure X from Sex Y </p>
+        </div>
+
+        <br><br>
+
+
+      </div>
+    </div>
+
+
+    
 
   </section>
 
 
 
+  <script>
+        $(document).ready(function () {
+          console.log("Document is ready");
+          $('.zoom').magnify({
+              // Configuration options
+          });
+      });
+
+      
+    $(window).on('load', function () {
+      $("#images_t").twentytwenty({
+        default_offset_pct: 0.5, // How much of the before image is visible when the page loads
+        orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
+        before_label: 'Input', // Set a custom before label
+        after_label: 'Output', // Set a custom after label
+        no_overlay: true, //Do not show the overlay with before and after
+        move_slider_on_hover: true, // Move slider on mouse hover?
+        move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
+        click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
+      });
+    });
+
+  </script>
 
   <footer class="footer">
     <div class="container">

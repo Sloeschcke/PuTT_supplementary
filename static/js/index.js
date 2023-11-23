@@ -1,7 +1,6 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 
-var INTERP_BASE = "./static/interpolation/interactive";
 var NUM_INTERP_FRAMES = 24;
 var old_img_t = 6;
 var canv = document.createElement("canvas");
@@ -13,61 +12,6 @@ var pixelData;
 var image;
 var current_dist = 170;
 var demo_guide;
-
-function preloadInterpolationImages() {
-
-  for(var j = 0; j < dists.length; j++){
-  var dist = dists[j];
-  interp_images[dist] = []
-    for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-      var path = INTERP_BASE + '/' + "model_output_aperture_" + i + "_focus_" + dist + ".jpg";
-      interp_images[dist][i] = new Image();
-      interp_images[dist][i].src = path;
-    }
-    demo_guide = new Image()
-    demo_guide.src = INTERP_BASE + '/demo_guide.jpg'
-}
-  disparity_image = new Image();
-  disparity_image.src = "./static/interpolation/copy/rounded.png";
-}
-
-function initInterpolationImage() {
-  image = demo_guide;
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  // console.log("fake image size " + image.width + " " + image.height + " wrapper width maybe " + $('#interpolation-image-wrapper').width);
-  image.onmousedown = GetCoordinates;
-  
-  $('#interpolation-image-wrapper').empty().append(image);
-}
-
-function setInterpolationImage(i) {
-  console.log("old image " + old_img_t + "current dist " + current_dist );
-  old_img_t = i;
-  image = interp_images[current_dist][i];
-
-  canv.width = disparity_image.width;
-  canv.height = disparity_image.height;
-  var ctx = canv.getContext("2d");
-  ctx.drawImage(disparity_image, 0, 0);
-  var c = canv.getContext('2d');
-  var p = c.getImageData(10, 10, 1, 1).data;
-  // console.log("canv width" + canv.width);
-
-  var hex = "RGB = " + p[0]+", "+p[1]+", "+p[2];
-  console.log("color " + hex);
-  if(pixelData != null){
-    console.log("pixel data " + pixelData[i]);
-  }
-  
-
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  // console.log("fake image size " + image.width + " " + image.height + " wrapper width maybe " + $('#interpolation-image-wrapper').width);
-  image.onmousedown = GetCoordinates;
-  
-  $('#interpolation-image-wrapper').empty().append(image);
-}
 
 
 $(document).ready(function() {
@@ -108,18 +52,7 @@ $(document).ready(function() {
     	});
     }
 
-    
-
-    preloadInterpolationImages();
-
-    $('#interpolation-slider').on('input', function(event) {
-      setInterpolationImage(this.value); //console.log(this.value); console.log($('#interpolation-slider')); console.log(this);
-    });
-
-    // setInterpolationImage(14);
-    initInterpolationImage();
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
-    $('#interpolation-slider').prop('value', old_img_t);
+  
 
     bulmaSlider.attach();
 
@@ -154,7 +87,6 @@ img.onload = function() {
 }
 
 // Set the source of the image
-img.src = './static/interpolation/copy/rounded.png';
 
 function FindPosition(oElement)
 {

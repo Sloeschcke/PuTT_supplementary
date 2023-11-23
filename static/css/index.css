@@ -239,3 +239,32 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
   background-color: #6ca0f4 !important; /* Light blue also for active button on hover */
   color: white !important;
 }
+
+.video-container {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.video-container video {
+  width: 100%; /* Ensures the video fills the container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Rounded corners for the video */
+}
+
+
+.compare {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
