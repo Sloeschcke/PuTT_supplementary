@@ -268,3 +268,108 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
   top: 0;
   left: 0;
 }
+
+.container_5images {
+  display: flex;
+  width: 100%;
+  align-items: stretch; /* Ensure alignment at the same height */
+}
+
+.large-image {
+  flex: 30%; /* Half of the container width for the large image */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; /* Space between the large and small images */
+}
+
+.large-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.large-image .title {
+  margin-bottom: 5px; /* Space between the title and the image */
+}
+
+.small-images-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  flex: 70%; /* Other half of the container width for the small images */
+  gap: 5px; /* Space between small images */
+}
+
+.small-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content */
+  justify-content: center;
+}
+
+.small-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.small-image .title {
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+.column-title {
+  grid-column: span 1; /* Each title spans one column */
+  text-align: center; /* Center-align the text */
+  margin-bottom: 0; /* Reduce space below the title */
+}
+
+
+/* Container for 6 images */
+/* Container for images */
+/* Container for images */
+.container_6images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: auto auto; /* Two rows of automatic height */
+  gap: 20px; /* Spacing between items */
+  position: relative;
+  width: 100%; /* Ensure the container takes full width */
+}
+
+/* Image container styling */
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally in the column */
+  text-align: center; /* Center text */
+}
+
+/* Image styling */
+.column img {
+  width: 100%; /* Full width of the column */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area of the container */
+}
+
+/* Row title styling (may need adjustment) */
+.row-title {
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-title.near-view {
+  left: 0;
+  top: 0;
+  height: 50%; /* Adjust height to match the row height */
+}
+
+.row-title.far-view {
+  left: 0;
+  top: 50%;
+  height: 50%;
+}
+

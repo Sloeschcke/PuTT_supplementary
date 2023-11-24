@@ -307,3 +307,68 @@ setTimeout(function() {
 // $(window).load(function() {
 //   $(window).trigger("resize.twentytwenty");
 // });
+
+
+function switchImages(location) {
+  // Define the base paths for the two locations
+  var basePath = {
+    girl: "static/images/girl_patches/",
+    tokyo: "static/images/tokyo_patches/"
+  };
+
+  // Define the image names for Tokyo; use similar pattern if girl images differ
+  var imageNames = ["PuTT_0.png", "TT-noup_0.png", "CP_0.png", "Tucker_0.png", "PuTT_1.png", "TT-noup_1.png", "CP_1.png", "Tucker_1.png"];
+
+  // Switch large image
+  document.querySelector(".large-image img").src = basePath[location] + (location === 'girl' ? "PuTT_full_image_with_zoom_area.png" : "PuTT_full_image_with_zoom_area.png");
+
+  // Switch small images
+  var smallImages = document.querySelectorAll(".small-image img");
+  smallImages.forEach(function(img, index) {
+    img.src = basePath[location] + imageNames[index];
+  });
+
+// Change the active button
+document.querySelectorAll('.btn').forEach(function(btn) {
+  btn.classList.remove('active');
+});
+document.getElementById(location === 'girl' ? 'example1_btn' : 'example2_btn').classList.add('active');
+}
+
+// Set the initial state to Girl16k
+window.onload = function() {
+  switchImages('girl');
+};
+
+function switchExampleNearFar(baseName) {
+  // Define the base path for images
+  var basePath = "static/images/near_far/" + baseName + "/";
+
+  function updateImageSource(id, newSrc) {
+    var img = document.getElementById(id);
+    if (img) {
+      img.src = basePath + newSrc;
+    } else {
+      console.error("Image not found for ID: ", id);
+    }
+  }
+
+  // Update the sources for Ground Truth, TensoRF, and PuTT images
+  updateImageSource('gt_far', "GT-far.png");
+  updateImageSource('gt_near', "GT-near.png");
+  updateImageSource('tensorf_far', "Tensorf_far.png");
+  updateImageSource('tensorf_near', "Tensorf_near.png");
+  updateImageSource('putt_far', "PuTT_far.png");
+  updateImageSource('putt_near', "PuTT_near.png");
+
+  // Update active button state
+  document.querySelectorAll('.button-group .btn').forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+  document.getElementById('btn_' + baseName).classList.add('active');
+}
+
+// Initialize with the first example
+window.onload = function() {
+  switchExampleNearFar('chair');
+};
