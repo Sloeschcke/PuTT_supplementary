@@ -373,3 +373,38 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
   height: 50%;
 }
 
+
+
+.table-of-contents {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
+}
+
+.table-of-contents h3 {
+  margin-bottom: 10px;
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.table-of-contents li {
+  margin: 5px 0;
+}
+
+.table-of-contents a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.table-of-contents a:hover {
+  text-decoration: underline;
+}

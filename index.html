@@ -87,14 +87,35 @@
       </div>
     </div>
   </section>
+  
+  <section>
+    <div class="container is-max-desktop">
+      <div class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#teaser">Teaser with Videos</a></li>
+          <li><a href="#Compression_2d">Compression (Fig. 4, 6) </a></li>
+          <li><a href="#Incomplete_data">Incomplete Data (Fig. 8, 10, 11)</a></li>
+          <li><a href="#Noisy_data">Noisy Data (Fig. 9, 12, 13)</a></li>
+          <li><a href="#Novel_view_synthesis">Novel View Synthesis (Fig. 7)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <section class="hero is-light is-small">
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="teaser">Teaser</h2>
+        </div>
+      </div>
 
     <div class="hero-body">
       <div class="container">
         <div class="columns">
           <div class="column video-container">
-            <video poster="" id="teaser" autoplay controls muted loop playsinline>
+            <video poster="" id="teaser_video" autoplay controls muted loop playsinline>
               <source src="./videos_compressed/Girl_16k_mov8sek_squaare.mp4" type="video/mp4">
             </video>
           </div>
@@ -107,8 +128,8 @@
       </div>
       <div class="columns is-centered has-text-centered" style="text-align: center;">
         <div class="container is-max-desktop">
-        <p><br />On the left, the "Girl With Pearl Earrings" image is reconstructed at 16k resolution using the
-          Prolongation Upsampling Tensor Train (PuTT) method,  achieving a compression factor of 200. On the right,
+        <p><br /> On the left, Video zooming in on the "Girl With Pearl Earrings" image reconstructed at 16k resolution using the
+          Prolongation Upsampling Tensor Train (PuTT) method,  achieving a compression factor of 200. On the right, Video of
           rendered test views of the Chair scene using a 12MB PuTT model.</p>
         </div>
       </div>
@@ -120,7 +141,12 @@
 
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Compression 2D</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" id="Compression_2d">Compression</h2>
+          </div>
+        </div>
+
       <!-- Text -->
       <div>
         <p>The following sections provide zoomed-in comparisons from Figures 4 and 6 of our paper, focusing on PuTT
@@ -192,11 +218,15 @@
     <br>
 
     <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Full View </h2>
+        </div>
+      </div>
 
-      <h2 class="title is-4">Full View</h2>
       <div>
         <p>These are full-scale views of the examples from the previous figure, also related to Figures 4 and 6 in the
-          paper. The focus here is on comparing PuTT against baseline methods for two 16k images, each processed at a
+          paper. The focus here is on comparing PuTT against baseline methods for two 16k images, using tensor network methods with a
           <i><strong>compression factor of 200</strong></i>. For an expanded view, <i><strong>click</strong></i> on the
           images to see them in full screen. Utilize the top buttons to switch between different examples, and the
           bottom buttons to alternate between models. The slider can be used for a direct comparison between the
@@ -328,15 +358,15 @@
         <!-- Title INCOMPLETE DATA -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Incomplete Data </h2>
+            <h2 class="title is-3" id="Incomplete_data">Incomplete Data </h2>
           </div>
         </div>
 
         <div class="has-text-left">
           <p>Visual comparison of PuTT against baseline methods under three scenarios of training on incomplete data
-            related to the resuls in Figure 11 of the aper. We use images with a 4k resolution and a <strong>compression
+            related to the resuls in Figure 11 of the paper. We use images with a 4k resolution and each model has a <strong>compression
               factor of 30</strong>. The first three images display training data with 99%, 95%, and 90% missing data,
-            respectively. Utilize the buttons below to view results for each scenario, comparing PuTT and baseline
+            respectively. Use the buttons below to view results for each scenario, comparing PuTT and baseline
             methods with and without upsampling. The top row showcases results with upsampling, while the bottom row
             presents outcomes without upsampling. For a more detailed examination, <i><strong>click</strong></i> on the
             images for a full-screen view.</p>
@@ -589,13 +619,13 @@
       <!-- Title Noisy DATA -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Noisy Data </h2>
+          <h2 class="title is-3" id="Noisy_data">Noisy Data </h2>
         </div>
       </div>
 
       <div class="has-text-left">
-        <p>Visual comparison of PuTT against baseline methods in the context of noisy data samples. This analysis
-          corresponds to Figure 12 in the paper and focuses on three different levels of Gaussian noise with (&sigma;)
+        <p>Visual comparison of PuTT against baseline methods in the context of noisy data samples. We use images with a 4k resolution and each model has a <strong>compression
+          factor of 30</strong>. This analysis corresponds to Figure 12 in the paper and focuses on three different levels of Gaussian noise with (&sigma;)
           values of 0.1, 0.5, and 1.0. By clicking on the buttons provided, you can explore the impact of noise on each
           method's performance. For a closer look at the details, <i><strong>click</strong></i> on the images to enlarge
           them to full-screen view.</p>
@@ -854,7 +884,7 @@
         <div class="has-text-left">
           <p>Here we present a side-by-side visual comparison of TT No Upsampling and our PuTT with 7 upsampling steps.
             The example showcases their performance on a 4k image affected by Gaussian noise (&sigma;=0.5) at a
-            compression factor of 30. This visual demonstration corresponds to the quantitative results shown in Figure
+            compression factor of 30. This is a qualitative example of the results shown in Figure
             13 (b) of the paper. Use the slider to closely examine and contrast the differences between the two methods.
           </p>
         </div>
@@ -891,17 +921,17 @@
   <section>
 
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Novel View Synthesis</h2>
+      <h2 class="title is-3" id="Novel_view_synthesis">Novel View Synthesis</h2>
       <div class="hero-body">
         <div class="container">
           <div class="columns">
             <div class="column video-container">
-              <video poster="" id="teaser" autoplay controls muted loop playsinline>
+              <video poster="" id="materials" autoplay controls muted loop playsinline>
                 <source src="./videos_compressed/PuTT_Materials.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column video-container">
-              <video poster="" id="plant" autoplay controls muted loop playsinline>
+              <video poster="" id="chair" autoplay controls muted loop playsinline>
                 <source src="./videos_compressed/PuTT_Mic.mp4" type="video/mp4">
               </video>
             </div>
