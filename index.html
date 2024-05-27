@@ -6,6 +6,7 @@
   <meta name="description" content="Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations">
   <meta name="keywords" content="Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations</title>
 
 
@@ -41,6 +42,8 @@
 
   <!-- Custom Scripts -->
   <script src="./static/js/custom.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -51,65 +54,129 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><b>Coarse-To-Fine Tensor Trains for Compact and Robust Visual
-                Representations</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="title is-1 publication-title">Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations</h1>
+                    <div class="is-size-5 publication-authors">
+                      <span class="author-block">
+                        <a href="https://sebulo.github.io/">Sebastian Loeschcke</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="author-block">
+                        <a href="https://danalaina.github.io/">Dan Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="author-block">
+                        <a href="https://www.linkedin.com/in/christian-leth-espensen-01bb86208/">Christian Leth-Espensen</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="author-block">
+                          <a href="https://sergebelongie.github.io/">Serge Belongie</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <span class="author-block">
+                        <a href="https://mkastoryano.com/">Michael J. Kastoryano</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <span class="author-block">
+                        <a href="https://sagiebenaim.github.io/">Sagie Benaim</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <p>&nbsp;</p>
+                    </div>
+                      <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>University of Copenhagen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="author-block"><sup>2</sup>Aarhus University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="author-block"><sup>3</sup>Hebrew University of Jerusalem</span>
+                        <p>&nbsp;</p>
+                        <h2 class="title is-3">ICML 2024</h2>
+                    </div>
+                    <p>&nbsp;</p>
+            <script>
+              $(document).ready(function() {
+                // var $zoom = $('.zoom').magnify(
+                // //   {
+                // //   magnifiedWidth: 1000,
+                // //   magnifiedHeight: 753
+                // // }
+                // );
+                // $zoom.destroy();
+              });
+            </script>
+  <style>
+  .magnify > .magnify-lens {
+    width: 130px;
+    height: 130px;
+  }
+  </style>
+  
+  <style>
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 10px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    
+    /* Style the active class, and buttons on mouse-over */
+    .active, .btn:hover {
+      background-color: #666;
+      color: white;
+    }
+  
+    /* .twentytwenty-container {
+      min-height: 200px;
+  } */
+  
+    </style>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="MISSING"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="MISSING"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="MISSING"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="MISSING"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+                <!-- <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                    </a> -->
+              </div>
+  
             </div>
-
-            <div class="is-size-5 publication-authors">
-
-              <h2 class="title is-3">Supplementary</h2>
-              <!-- <span class="author-block"><sup></span> -->
-            </div>
-
-            <style>
-              .magnify>.magnify-lens {
-                width: 130px;
-                height: 130px;
-              }
-            </style>
-
-            <style>
-              /* Style the buttons */
-              .btn {
-                border: none;
-                outline: none;
-                padding: 10px 16px;
-                background-color: #f1f1f1;
-                cursor: pointer;
-                font-size: 18px;
-                border-radius: 8px;
-              }
-            </style>
-
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <section>
-    <div class="container is-max-desktop">
-      <div class="table-of-contents">
-        <h3>Table of Contents</h3>
-        <ul>
-          <li><a href="#teaser">Teaser with Videos</a></li>
-          <li><a href="#Compression_2d">Compression (Fig. 4, 6) </a></li>
-          <li><a href="#Incomplete_data">Incomplete Data (Fig. 8, 10, 11)</a></li>
-          <li><a href="#Noisy_data">Noisy Data (Fig. 9, 12, 13)</a></li>
-          <li><a href="#Novel_view_synthesis">Novel View Synthesis (Fig. 7)</a></li>
-        </ul>
       </div>
     </div>
   </section>
 
   <section class="hero is-light is-small">
     <br>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3" id="teaser">Teaser</h2>
-        </div>
-      </div>
 
     <div class="hero-body">
       <div class="container">
@@ -135,33 +202,69 @@
       </div>
     </div>
 
-
   </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The ability to learn compact, high-quality, and easy-to-optimize representations for visual data is paramount to many applications such as novel view synthesis and 3D reconstruction. Recent work has shown substantial success in using tensor networks to design such compact and high-quality representations.
+However, the ability to optimize tensor-based representations, and in particular, the highly compact tensor train representation, is still lacking. This has prevented practitioners from deploying the full potential of tensor networks for visual data. 
+</p>
+<p>
+To this end, we propose `Prolongation Upsampling Tensor Train (PuTT)', a novel method for learning tensor train representations in a coarse-to-fine manner. Our method involves the prolonging or `upsampling' of a learned tensor train representation, creating a sequence of `coarse-to-fine' tensor trains that are incrementally refined. 
+We evaluate our representation along three axes: (1). compression, (2). denoising capability, and (3). image completion capability. To assess these axes, we consider the tasks of image fitting, 3D fitting, and novel view synthesis, where our method shows an improved performance compared to state-of-the-art tensor-based methods.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+      <br>
+
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+              <p>Our Prolongation Upsampling Tensor Train (PuTT) method progressively learns a Quantized Tensor Train (QTT) representation of a visual object, starting from a coarse resolution and refining it through multiple upsampling steps.
+                
+                In our process, we begin with a down-sampled version of the object and iteratively upsample and learn finer representations. Each time we upsample we prolong the tensor train with an additional core.
+                 The training process is stabilized by using upsampled priors, ensuring convergence to optimal solutions. 
+              </p>
+            <br>
+            <div class="is-flex is-justify-content-center">
+                <img src="./static/figures/method.png" width="1000" alt="Full coarse-to-fine learning, integrating 'Train' and 'Upsample' phases. We start with input I_D, which is downscaled to I_{D-l} (resolution 2^{d-l}×2^{d-l}). A QTT is then randomly initialized for I_{D-l}. After training this QTT up to iteration i_1, we proceed with upsampling, producing T_{D-l+1} of length D-l+1. This represents a grid at resolution 2^{d-l+1}×2^{d-l+1} and requires sampling from a newly downsampled target I_{D-l+1} of the same resolution.">
+            </div>
+            <p class="caption">
+              Full coarse-to-fine learning, integrating 'Train' and 'Upsample' phases. We start with input \(I_D\), which is downscaled to \(I_{D-l}\) (resolution \(2^{d-l} \times 2^{d-l}\)). A <span style="color: #ffd700;">QTT</span> is then randomly initialized for \(I_{D-l}\). After <span style="color: #008000;">training</span> this QTT up to iteration \(i_1\), we proceed with <span style="color: #0000ff;">upsampling</span>, producing \(T_{D-l+1}\) of length \(D-l+1\). This represents a grid at resolution \(2^{d-l+1} \times 2^{d-l+1}\) and requires sampling from a newly downsampled target \(I_{D-l+1}\) of the same resolution.
+          </p>
+            <br>
+              <br>
+              <br>
+              </div>
+          </div>
+      </div>
 
 
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3" id="Compression_2d">Compression</h2>
+          <h2 class="title is-3" id="Compression_2d">Compression Results</h2>
           </div>
         </div>
 
       <!-- Text -->
       <div>
-        <p>The following section provides zoomed-in comparisons from Figures 4 and 6 of our paper, focusing on PuTT
-          versus baseline methods for two 16k images at a <i><strong>compression factor of 200</strong></i>. These
-          detailed views clearly demonstrate the quality differences, emphasizing PuTT's enhanced performance over the
-          baselines. For an expanded view, <i><strong>click</strong></i> on the images to see them in full screen. Use
-          the buttons to switch between different examples.</p>
-      </div>
+        <p>
+          PuTT achieves high-quality results even at high compression ratios. Here, we present detailed comparisons for a <i><strong>16k</strong></i> image of Girl With Pearl Earrings with a <i><strong>compression factor of 200</strong></i>.
+        </p>
+    </div>
       <br>
-
-      <button class="btn active" id="example1_btn" onclick="switchImages('girl')">Girl With Pearl Earrings -
-        16k</button>
-      <button class="btn" id="example2_btn" onclick="switchImages('tokyo')">Tokyo - 16k</button>
-      <label class="label"><br /></label>
-
 
       <div class="container_5images">
         <!-- Large square image with title -->
@@ -225,17 +328,11 @@
       </div>
 
       <div>
-        <p>These are full-scale views of the examples from the previous figure, also related to Figures 4 and 6 in the
-          paper. The focus here is on comparing PuTT against baseline methods for two 16k images, using tensor network methods with a
-          <i><strong>compression factor of 200</strong></i>. For an expanded view, <i><strong>click</strong></i> on the
-          images to see them in full screen. Utilize the top buttons to switch between different examples, and the
-          bottom buttons to alternate between models. The slider can be used for a direct comparison between the
-          selected model and PuTT.</p>
+        <p>
+          These full-scale views offer detailed comparisons between PuTT and baseline methods for the a Tokyo 16k image, focusing on tensor network methods with a <i><strong>compression factor of 200</strong></i>.
+      </p>
       </div>
       <br>
-      <button class="btn active" id="example1_btn" onclick="changedata(0)">Tokyo - 16k</button>
-      <button class="btn" id="example2_btn" onclick="changedata(1)">Girl With Pearl Earrings - 16k</button>
-      <label class="label"><br /></label>
 
       <div id="tokyo16k">
         <div class="field-body"
@@ -363,13 +460,12 @@
         </div>
 
         <div class="has-text-left">
-          <p>Visual comparison of PuTT against baseline methods under three scenarios of training on incomplete data
-            related to the resuls in Figure 11 of the paper. We use images with a 4k resolution and each model has a <strong>compression
+          <p>Visual comparison of PuTT against baseline methods under three scenarios of training on incomplete data.
+             We use images with a 4k resolution and each model has a <strong>compression
               factor of 30</strong>. The first three images display training data with 99%, 95%, and 90% missing data,
             respectively. Use the buttons below to view results for each scenario, comparing PuTT and baseline
             methods with and without upsampling. The top row showcases results with upsampling, while the bottom row
-            presents outcomes without upsampling. For a more detailed examination, <i><strong>click</strong></i> on the
-            images for a full-screen view.</p>
+            presents outcomes without upsampling. </p>
         </div>
         <br>
 
@@ -612,262 +708,6 @@
   <section class="section">
 
 
-    <div class="container is-max-desktop">
-
-      <br> <br> 
-
-      <!-- Title Noisy DATA -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3" id="Noisy_data">Noisy Data </h2>
-        </div>
-      </div>
-
-      <div class="has-text-left">
-        <p>Visual comparison of PuTT against baseline methods in the context of noisy data samples. We use images with a 4k resolution and each model has a <strong>compression
-          factor of 30</strong>. This analysis corresponds to Figure 12 in the paper and focuses on three different levels of Gaussian noise with (&sigma;)
-          values of 0.1, 0.5, and 1.0. By clicking on the buttons provided, you can explore the impact of noise on each
-          method's performance. For a closer look at the details, <i><strong>click</strong></i> on the images to enlarge
-          them to full-screen view.</p>
-      </div>
-      <br>
-      <div class="image-line" style="display: flex; justify-content: space-around;">
-        <div class="image-container">
-          <label class="label" style="margin: 0; padding: 0; text-align: center;">
-            <h3 class="title is-5">Noise Level 0.1 </h3>
-          </label>
-          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/westerlund_4k_0.1.png" alt="0.1Noise"
-            border="1" onclick="openFullscreen(this);">
-        </div>
-
-        <div class="image-container">
-          <label class="label" style="margin: 0; padding: 0; text-align: center;">
-            <h3 class="title is-5">Noise Level 0.5</h3>
-          </label>
-          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/tokyo_4k_0.5.png" alt="0.5noise"
-            border="1" onclick="openFullscreen(this);">
-        </div>
-
-        <div class="image-container">
-          <label class="label" style="margin: 0; padding: 0; text-align: center;">
-            <h3 class="title is-5">Noise Level 1.0</h3>
-          </label>
-          <img src="./static/images/Noise_color_mixed_images/mixed_noisy_inputs/marseille_4k_1.0.png" alt="1.0noise"
-            border="1" onclick="openFullscreen(this);">
-        </div>
-      </div>
-
-      <br>
-
-      <div class="field-body"
-        style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
-        <button class="btn active" style="margin-left: 50px;" id="btn1_noise"
-          onclick="showExampleNoisyData('example1_noise', this.id)">Noise Level 1.0</button>
-        <button class="btn" id="btn2_noise" onclick="showExampleNoisyData('example2_noise', this.id)">Noise Level
-          0.5</button>
-        <button class="btn" style="margin-right: 50px;" id="btn3_noise"
-          onclick="showExampleNoisyData('example3_noise', this.id)">Noise Level 0.1</button>
-      </div>
-
-
-      <br>
-
-      <div class="container is-max-desktop" id="example1_noise">
-        <!-- 1.0 noise-->
-
-        <div class="container is-max-desktop">
-          <!-- Title Section -->
-
-          <!-- Image Grid Section -->
-          <div class="image-line" style="display: flex; justify-content: space-around;">
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">PuTT </h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/1.0/TT_up_noise_1_Image_iteration_8191_psnr_12.659_ssim_0.211.png"
-                border="1" alt="PuTT" onclick="openFullscreen(this);">
-            </div>
-
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">CP</h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/1.0/CP_up_noise_1_Image_iteration_8191_psnr_11.066_ssim_0.118.png"
-                border="1" alt="TT noup tokyo16k" onclick="openFullscreen(this);">
-            </div>
-
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">Tucker</h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/1.0/Tucker_up_noise_1_Image_iteration_8191_psnr_11.986_ssim_0.165.png"
-                border="1" alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
-            </div>
-          </div>
-          <div class="image-line" style="display: flex; justify-content: space-around;">
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/1.0/TT_noup_noise_1_Image_iteration_8191_psnr_12.247_ssim_0.142.png"
-                border="1" alt="PuTT" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">TT No Upsampling </h3>
-            </div>
-
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/1.0/CP_noup_noise_1_Image_iteration_8191_psnr_7.074_ssim_0.042.png"
-                border="1" alt="TT noup tokyo16k" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">CP No Upsampling </h3>
-            </div>
-
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/1.0/Tucker_noup_noise_1_Image_iteration_8191_psnr_10.591_ssim_0.073.png"
-                border="1" alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">Tucker No Upsampling </h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="container is-max-desktop" id="example2_noise" style="display:none;">
-        <!--0.5 noise -->
-        <div class="container is-max-desktop">
-          <!-- Image Grid Section -->
-          <div class="image-line" style="display: flex; justify-content: space-around;">
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">PuTT </h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.5/TT_up_noise_0.5_Image_iteration_8191_psnr_18.688_ssim_0.561.png"
-                border="1" alt="PuTT" onclick="openFullscreen(this);">
-            </div>
-
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">CP</h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.5/CP_up_noise_0.5_Image_iteration_8191_psnr_17.996_ssim_0.482.png"
-                border="1" alt="TT noup tokyo16k" onclick="openFullscreen(this);">
-            </div>
-
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">Tucker</h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.5/Tucker_up_noise_0.5_Image_iteration_8191_psnr_17.592_ssim_0.409.png"
-                border="1" alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
-            </div>
-          </div>
-          <div class="image-line" style="display: flex; justify-content: space-around;">
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.5/TT_noup_noise_0.5_Image_iteration_8191_psnr_17.338_ssim_0.393.png"
-                border="1" alt="PuTT" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">TT No Upsampling </h3>
-            </div>
-
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.5/CP_noup_noise_0.5_Image_iteration_8191_psnr_14.907_ssim_0.165.png"
-                border="1" alt="TT noup tokyo16k" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">CP No Upsampling </h3>
-            </div>
-
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.5/Tucker_noup_noise_0.5_Image_iteration_8191_psnr_14.231_ssim_0.172.png"
-                border="1" alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">Tucker No Upsampling </h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="container is-max-desktop" id="example3_noise" style="display:none;">
-        <!-- 0.1 noise -->
-        <div class="container is-max-desktop">
-
-          <!-- Image Grid Section -->
-          <div class="image-line" style="display: flex; justify-content: space-around;">
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">PuTT </h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.1/TT_up_noise_0.1_Image_iteration_8191_psnr_28.937_ssim_0.807.png"
-                border="1" alt="PuTT" onclick="openFullscreen(this);">
-            </div>
-
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">CP</h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.1/CP_up_noise_0.1_Image_iteration_8191_psnr_25.573_ssim_0.654.png"
-                border="1" alt="TT noup tokyo16k" onclick="openFullscreen(this);">
-            </div>
-
-            <div class="image-container">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">Tucker</h3>
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.1/Tucker_up_noise_0.1_Image_iteration_8191_psnr_25.298_ssim_0.638.png"
-                border="1" alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
-            </div>
-          </div>
-          <div class="image-line" style="display: flex; justify-content: space-around;">
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.1/TT_noup_noise_0.1_Image_iteration_8191_psnr_26.348_ssim_0.714.png"
-                border="1" alt="PuTT" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">TT No Upsampling </h3>
-            </div>
-
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.1/CP_noup_noise_0.1_Image_iteration_8191_psnr_24.184_ssim_0.577.png"
-                border="1" alt="TT noup tokyo16k" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">CP No Upsampling </h3>
-            </div>
-
-            <div class="image-container">
-              </label>
-              <img
-                src="./static/images/Noise_color_mixed_images/0.1/Tucker_noup_noise_0.1_Image_iteration_8191_psnr_22.717_ssim_0.483.png"
-                border="1" alt="Tucker up tokyo16k" onclick="openFullscreen(this);">
-              <label class="label" style="margin: 0; padding: 0; text-align: center;">
-                <h3 class="title is-5">Tucker No Upsampling </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
 
   </section>
 
@@ -884,8 +724,7 @@
         <div class="has-text-left">
           <p>Here we present a side-by-side visual comparison of TT No Upsampling and our PuTT with 7 upsampling steps.
             The example showcases their performance on a 4k image affected by Gaussian noise (&sigma;=0.5) at a
-            compression factor of 30. This is a qualitative example of the results shown in Figure
-            13 (b) of the paper. Use the slider to closely examine and contrast the differences between the two methods.
+            compression factor of 30.
           </p>
         </div>
 
@@ -938,8 +777,7 @@
           </div>
         </div>
         <div class="columns is-centered has-text-centered" style="text-align: center;">
-          <p><br /> Rendered test views if the Materials and Mic scenes using a 12MB PuTT model. These are qualitative
-            examples related to Table 1 in the paper. </p>
+          <p><br /> Rendered test views if the Materials and Mic scenes using a 12MB PuTT model. </p>
         </div>
       </div>
 
@@ -947,8 +785,7 @@
 
       <h2 class="title is-4">Near and Far Views</h2>
       <div>
-        <p> Visual comparisons of the Near and Far views of TensoRF and PuTT. This figure relates to Figure 7 and Tab. 2
-          in the paper.</p>
+        <p> Visual comparisons of the Near and Far views of TensoRF and PuTT.</p>
       </div>
       <br><br>
 
