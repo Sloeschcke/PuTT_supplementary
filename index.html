@@ -232,15 +232,16 @@ We evaluate our representation along three axes: (1). compression, (2). denoisin
           <div class="content has-text-justified">
               <p>Our Prolongation Upsampling Tensor Train (PuTT) method progressively learns a Quantized Tensor Train (QTT) representation of a visual object, starting from a coarse resolution and refining it through multiple upsampling steps.
                 
-                In our process, we begin with a down-sampled version of the object and iteratively upsample and learn finer representations. Each time we upsample we prolong the tensor train with an additional core.
-                 The training process is stabilized by using upsampled priors, ensuring convergence to optimal solutions. 
+                In our process, we begin with a down-sampled version of the object and <span style="color: #FF474C;">iteratively</span> <span style="color: #6C8EBF;">'Upsample'</span> and learn finer representations. Each time we upsample we prolong the <span style="color: #EDAB00;">QTT</span> with an additional core.
+                 The <span style="color: #82B366;">training</span> process is stabilized by using upsampled priors, ensuring convergence to optimal solutions. 
               </p>
             <br>
             <div class="is-flex is-justify-content-center">
                 <img src="./static/figures/method.png" width="1000" alt="Full coarse-to-fine learning, integrating 'Train' and 'Upsample' phases. We start with input I_D, which is downscaled to I_{D-l} (resolution 2^{d-l}×2^{d-l}). A QTT is then randomly initialized for I_{D-l}. After training this QTT up to iteration i_1, we proceed with upsampling, producing T_{D-l+1} of length D-l+1. This represents a grid at resolution 2^{d-l+1}×2^{d-l+1} and requires sampling from a newly downsampled target I_{D-l+1} of the same resolution.">
             </div>
             <p class="caption">
-              Full coarse-to-fine learning, integrating 'Train' and 'Upsample' phases. We start with input \(I_D\), which is downscaled to \(I_{D-l}\) (resolution \(2^{d-l} \times 2^{d-l}\)). A <span style="color: #ffd700;">QTT</span> is then randomly initialized for \(I_{D-l}\). After <span style="color: #008000;">training</span> this QTT up to iteration \(i_1\), we proceed with <span style="color: #0000ff;">upsampling</span>, producing \(T_{D-l+1}\) of length \(D-l+1\). This represents a grid at resolution \(2^{d-l+1} \times 2^{d-l+1}\) and requires sampling from a newly downsampled target \(I_{D-l+1}\) of the same resolution.
+              Full coarse-to-fine learning, integrating <span style="color: #82B366;">'Train'</span> and <span style="color: #6C8EBF;">'Upsample'</span> phases. We start with input \(I_D\), which is downscaled to \(I_{D-l}\) (resolution \(2^{d-l} \times 2^{d-l}\)).
+               A <span style="color: #EDAB00;">QTT</span> is then randomly initialized for \(I_{D-l}\). After <span style="color: #82B366;">training</span> this QTT up to iteration \(i_1\), we proceed with <span style="color: #6C8EBF;">upsampling</span>, producing \(T_{D-l+1}\) of length \(D-l+1\). This represents a grid at resolution \(2^{d-l+1} \times 2^{d-l+1}\) and requires sampling from a newly downsampled target \(I_{D-l+1}\) of the same resolution.
           </p>
             <br>
               <br>
