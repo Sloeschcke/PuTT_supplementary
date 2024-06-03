@@ -57,23 +57,24 @@
             <h1 class="title is-1 publication-title">Coarse-To-Fine Tensor Trains for Compact Visual Representations</h1>
                     <div class="is-size-5 publication-authors">
                       <span class="author-block">
-                        <a href="https://sebulo.github.io/">Sebastian Loeschcke</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a href="https://sebulo.github.io/">Sebastian Loeschcke</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <span class="author-block">
                         <a href="https://danalaina.github.io/">Dan Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <span class="author-block">
-                        <a href="https://www.linkedin.com/in/christian-leth-espensen-01bb86208/">Christian Leth-Espensen</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a href="https://www.linkedin.com/in/christian-leth-espensen-01bb86208/">Christian Leth-Espensen</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <span class="author-block">
                           <a href="https://sergebelongie.github.io/">Serge Belongie</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                       <span class="author-block">
                         <a href="https://mkastoryano.com/">Michael J. Kastoryano</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                       <span class="author-block">
-                        <a href="https://sagiebenaim.github.io/">Sagie Benaim</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a href="https://sagiebenaim.github.io/">Sagie Benaim</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <p>&nbsp;</p>
                     </div>
                       <div class="is-size-5 publication-authors">
                         <span class="author-block"><sup>1</sup>University of Copenhagen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                        <span class="author-block"><sup>2</sup>Aarhus University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                        <span class="author-block"><sup>3</sup>Hebrew University of Jerusalem</span>
+                        <span class="author-block"><sup>2</sup>IT University of Copenhagen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="author-block"><sup>3</sup>Aarhus University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="author-block"><sup>4</sup>Hebrew University of Jerusalem</span>
                         <p>&nbsp;</p>
                         <h2 class="title is-3">ICML 2024</h2>
                     </div>
@@ -213,12 +214,15 @@
           <div class="content has-text-justified">
             <p>
               The ability to learn compact, high-quality, and easy-to-optimize representations for visual data is paramount to many applications such as novel view synthesis and 3D reconstruction. Recent work has shown substantial success in using tensor networks to design such compact and high-quality representations.
-However, the ability to optimize tensor-based representations, and in particular, the highly compact tensor train representation, is still lacking. This has prevented practitioners from deploying the full potential of tensor networks for visual data. 
-</p>
-<p>
-To this end, we propose `Prolongation Upsampling Tensor Train (PuTT)', a novel method for learning tensor train representations in a coarse-to-fine manner. Our method involves the prolonging or `upsampling' of a learned tensor train representation, creating a sequence of `coarse-to-fine' tensor trains that are incrementally refined. 
-We evaluate our representation along three axes: (1). compression, (2). denoising capability, and (3). image completion capability. To assess these axes, we consider the tasks of image fitting, 3D fitting, and novel view synthesis, where our method shows an improved performance compared to state-of-the-art tensor-based methods.
-            </p>
+              However, the ability to optimize tensor-based representations, and in particular, the highly compact tensor train representation, is still lacking. This has prevented practitioners from deploying the full potential of tensor networks for visual data. 
+              </p>
+              <p>
+                To this end, we propose `Prolongation Upsampling Tensor Train (PuTT)', a novel method for learning tensor train representations in a coarse-to-fine manner. Our method involves the prolonging or `upsampling' of a learned tensor train representation, creating a sequence of `coarse-to-fine' tensor trains that are incrementally refined. 
+                We evaluate our representation along three axes: (1). compression, (2). denoising capability, and (3). image completion capability. To assess these axes, we consider the tasks of image fitting, 3D fitting, and novel view synthesis, where our method shows an improved performance compared to state-of-the-art tensor-based methods.
+              </p>
+              <p>
+                <strong>TL;DR</strong> We introduce 'PuTT', a novel method for learning a coarse-to-fine tensor train representation of visual data, effective for 2D/3D fitting and novel view synthesis, even with noisy or missing data.
+              </p>
           </div>
         </div>
       </div>
